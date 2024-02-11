@@ -130,6 +130,50 @@ body{
     right: 20px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Equally space items */
+}
+
+.Btn {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    top: 100px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: url("images/cursor.cur"), auto;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 20px;
+    text-align: center;
+    line-height: 2px;
+    color: white;
+}
+
+.Btn::before,
+.Btn::after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    z-index: -1;
+}
+
+.Btn::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+
+
 /* @keyframes up {
     from{
         transform: translateY(0);
